@@ -17,22 +17,23 @@ To model this system, the script solves a coupled non-linear system of four ordi
 
 The code models a well-mixed, lumped system across two main physiological pools (Blood and Liver) across four distinct state variables:
 
-**E_B(t)**: Blood Ethanol Concentration (mM)
-**E_L(t)**: Liver Ethanol Concentration (mM)
-**A_B(t)**: Blood Acetaldehyde Concentration (mM)
-**A_L(t)**: Liver Acetaldehyde Concentration (mM)
-Kinetic Equations
+**E_B(t)**: Blood Ethanol Concentration (mM).
+**E_L(t)**: Liver Ethanol Concentration (mM).
+**A_B(t)**: Blood Acetaldehyde Concentration (mM).
+**A_L(t)**: Liver Acetaldehyde Concentration (mM).
+
+## Kinetic Equations
 The reaction rates for ethanol metabolism (vADH) and acetaldehyde metabolism (vALDH) utilize non-steady-state Michaelis-Menten kinetics scaled by the liver health fraction (alpha):
 
-*vADH = alpha ⋅ VmaxE ⋅ (E_L / (KmE + E_L))*
-*vALDH = alpha ⋅ VmaxA ⋅ (A_L / (KmA + A_L))*
+*vADH = alpha ⋅ VmaxE ⋅ (E_L / (KmE + E_L))*.
+*vALDH = alpha ⋅ VmaxA ⋅ (A_L / (KmA + A_L))*.
 
 The differential dynamics governing the entire system are solved simultaneously using the following system of equations:
 
-*dE_B / dt = (Q / VB) ⋅ (E_L - E_B) + u(t) / VB*
-*dE_L / dt = (Q / VL) ⋅ (E_B - E_L) - vADH*
-*dA_B / dt = (Q / VB) ⋅ (A_L - A_B)*
-*dA_L / dt = (Q / VL) ⋅ (A_B - A_L) + vADH - vALDH*
+*dE_B / dt = (Q / VB) ⋅ (E_L - E_B) + u(t) / VB*.
+*dE_L / dt = (Q / VL) ⋅ (E_B - E_L) - vADH*.
+*dA_B / dt = (Q / VB) ⋅ (A_L - A_B)*.
+*dA_L / dt = (Q / VL) ⋅ (A_B - A_L) + vADH - vALDH*.
 
 Where u(t) represents the alcohol input function over a specified drinking window.
 
