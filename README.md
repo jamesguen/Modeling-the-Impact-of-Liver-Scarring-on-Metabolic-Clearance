@@ -17,10 +17,10 @@ To model this system, the script solves a coupled non-linear system of four ordi
 
 The code models a well-mixed, lumped system across two main physiological pools (Blood and Liver) across four distinct state variables:
 
-* **$E_B(t)$**: Blood Ethanol Concentration (mM)[cite: 1]
-* **$E_L(t)$**: Liver Ethanol Concentration (mM)[cite: 1]
-* **$A_B(t)$**: Blood Acetaldehyde Concentration (mM)[cite: 1]
-* **$A_L(t)$**: Liver Acetaldehyde Concentration (mM)[cite: 1]
+* **$E_B(t)$**: Blood Ethanol Concentration (mM)
+* **$E_L(t)$**: Liver Ethanol Concentration (mM)
+* **$A_B(t)$**: Blood Acetaldehyde Concentration (mM)
+* **$A_L(t)$**: Liver Acetaldehyde Concentration (mM)
 
 ## Kinetic Equations
 The reaction rates for ethanol metabolism (vADH) and acetaldehyde metabolism (vALDH) utilize non-steady-state Michaelis-Menten kinetics scaled by the liver health fraction (alpha):
