@@ -55,16 +55,19 @@ Execute the script from the MATLAB Command Window:
 ***run('liver_clearance_sim.m')***
 
 ## Expected Outputs
-The script initializes a custom dark-themed GUI dashboard featuring a 2x2 subplot visualizer grid. It loops through 5 distinct $\alpha$ variations ($\alpha$ = 1.0, 0.9, 0.75, 0.5, 0.3) and color-codes each curve accordingly to plot concentration profiles over time:
 
-Top Left: Blood Ethanol Concentration $E_B(t)$ over a 6-hour window.  
-Top Right: Liver Ethanol Concentration $E_L(t)$.  
-Bottom Left: Blood Acetaldehyde Concentration $A_B(t)$.  
-Bottom Right: Liver Acetaldehyde Concentration $A_L(t)$.  
+The script initializes a custom dark-themed GUI dashboard featuring a 2x2 subplot visualizer grid.  
+It loops through 5 distinct $\alpha$ variations ($\alpha = 1.0, 0.9, 0.75, 0.5, 0.3$) and color-codes each curve accordingly to plot concentration profiles over time:<br><br>
+* **Top Left:** Blood Ethanol Concentration $E_B(t)$ over a 6-hour window.
+* **Top Right:** Liver Ethanol Concentration $E_L(t)$.
+* **Bottom Left:** Blood Acetaldehyde Concentration $A_B(t)$.
+* **Bottom Right:** Liver Acetaldehyde Concentration $A_L(t)$.
 
-Key Analytical Takeaway: As $\alpha$ approaches 0.3 (advanced cirrhosis/severe scarring), the metabolism shifts into zero-order saturation limits. The liver curves begin to directly mirror the body blood pool, showing an inability to clear metabolic volumes effectively, resulting in a dangerous time-extension of toxic acetaldehyde exposure.
+**Key Analytical Takeaway:**  
+As $\alpha$ approaches 0.3 (advanced cirrhosis/severe scarring), the metabolism shifts into zero-order saturation limits. The liver curves begin to directly mirror the body blood pool, showing an inability to clear metabolic volumes effectively, resulting in a dangerous time-extension of toxic acetaldehyde exposure.
 
 ## Credits
-Code Implementation: James Guentert  
-Project Team Members: Abigail Marciniak, James Guentert, Kiyan Nguyen Abel, Satya Govindarajan  
-Course Instructor: Professor Anna Grosberg, University of California, Irvine (UCI)
+
+* **Code Implementation:** James Guentert
+* **Project Team Members:** Abigail Marciniak, James Guentert, Kiyan Nguyen Abel, Satya Govindarajan
+* **Course Instructor:** Professor Anna Grosberg, University of California, Irvine (UCI)
