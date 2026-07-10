@@ -26,9 +26,9 @@ The code models a well-mixed, lumped system across two main physiological pools 
 
 The reaction rates for ethanol metabolism ($v_{ADH}$) and acetaldehyde metabolism ($v_{ALDH}$) utilize non-steady-state Michaelis-Menten kinetics scaled by the liver health fraction ($\alpha$):
 
-$$v_{ADH} = \$\alpha$ \cdot V_{max,E} \cdot \left(\frac{E_L}{K_{m,E} + E_L}\right)$$
+$$v_{ADH} = \alpha \cdot V_{max,E} \cdot \left(\frac{E_L}{K_{m,E} + E_L}\right)$$
 
-$$v_{ALDH} = \$\alpha$ \cdot V_{max,A} \cdot \left(\frac{A_L}{K_{m,A} + A_L}\right)$$
+$$v_{ALDH} = \alpha \cdot V_{max,A} \cdot \left(\frac{A_L}{K_{m,A} + A_L}\right)$$
 
 The differential dynamics governing the entire system are solved simultaneously using the following system of equations:
 
@@ -55,14 +55,14 @@ Execute the script from the MATLAB Command Window:
 ***run('liver_clearance_sim.m')***
 
 ## Expected Outputs
-The script initializes a custom dark-themed GUI dashboard featuring a 2x2 subplot visualizer grid. It loops through 5 distinct alpha variations (alpha = 1.0, 0.9, 0.75, 0.5, 0.3) and color-codes each curve accordingly to plot concentration profiles over time:
+The script initializes a custom dark-themed GUI dashboard featuring a 2x2 subplot visualizer grid. It loops through 5 distinct $\alpha$ variations ($\alpha$ = 1.0, 0.9, 0.75, 0.5, 0.3) and color-codes each curve accordingly to plot concentration profiles over time:
 
 Top Left: Blood Ethanol Concentration E_B(t) over a 6-hour window.
 Top Right: Liver Ethanol Concentration E_L(t).
 Bottom Left: Blood Acetaldehyde Concentration A_B(t).
 Bottom Right: Liver Acetaldehyde Concentration A_L(t).
 
-Key Analytical Takeaway: As alpha approaches 0.3 (advanced cirrhosis/severe scarring), the metabolism shifts starkly into zero-order saturation limits. The liver curves begin to directly mirror the body blood pool, showing an inability to clear metabolic volumes effectively, resulting in a dangerous time-extension of toxic acetaldehyde exposure.
+Key Analytical Takeaway: As $\alpha$ approaches 0.3 (advanced cirrhosis/severe scarring), the metabolism shifts into zero-order saturation limits. The liver curves begin to directly mirror the body blood pool, showing an inability to clear metabolic volumes effectively, resulting in a dangerous time-extension of toxic acetaldehyde exposure.
 
 ## Credits
 Code Implementation: James Guentert
