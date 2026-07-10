@@ -8,10 +8,10 @@ This script simulates a multi-compartment, non-steady-state mass balance model o
 
 When alcohol is consumed, it is processed primarily in the liver. Ethanol is converted into highly toxic acetaldehyde via alcohol dehydrogenase (ADH), which is further metabolized into the less harmful acetate via aldehyde dehydrogenase (ALDH).
 
-To model this system, the script solves a coupled non-linear system of four ordinary differential equations (ODEs) using MATLAB's built-in ode45 solver. To simulate varying stages of liver disease, a dimensionless scaling parameter, **alpha**, is introduced:
+To model this system, the script solves a coupled non-linear system of four ordinary differential equations (ODEs) using MATLAB's built-in ode45 solver. To simulate varying stages of liver disease, a dimensionless scaling parameter, **$\alpha$**, is introduced:
 
-**alpha = 1.0:** Healthy liver tissue with 100% metabolic capacity.
-**alpha < 1.0:** Progressively scarred or damaged liver tissue, representing a fractional reduction in normal enzyme efficiency (Vmax).
+**$\alpha$ = 1.0:** Healthy liver tissue with 100% metabolic capacity.
+**$\alpha$ < 1.0:** Progressively scarred or damaged liver tissue, representing a fractional reduction in normal enzyme efficiency (Vmax).
 
 ## Model Architecture
 
@@ -26,9 +26,9 @@ The code models a well-mixed, lumped system across two main physiological pools 
 
 The reaction rates for ethanol metabolism ($v_{ADH}$) and acetaldehyde metabolism ($v_{ALDH}$) utilize non-steady-state Michaelis-Menten kinetics scaled by the liver health fraction ($\alpha$):
 
-$$v_{ADH} = \alpha \cdot V_{max,E} \cdot \left(\frac{E_L}{K_{m,E} + E_L}\right)$$
+$$v_{ADH} = \$\alpha$ \cdot V_{max,E} \cdot \left(\frac{E_L}{K_{m,E} + E_L}\right)$$
 
-$$v_{ALDH} = \alpha \cdot V_{max,A} \cdot \left(\frac{A_L}{K_{m,A} + A_L}\right)$$
+$$v_{ALDH} = \$\alpha$ \cdot V_{max,A} \cdot \left(\frac{A_L}{K_{m,A} + A_L}\right)$$
 
 The differential dynamics governing the entire system are solved simultaneously using the following system of equations:
 
